@@ -1,0 +1,27 @@
+{
+  "name": "j-logger",
+  "version": "1.0.0",
+  "description": "Modular and extensible Node.js logger module",
+  "main": "logger.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanDArdilaG/j-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "nodejs"
+  ],
+  "author": "Juan D. Ardila G.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JuanDArdilaG/j-logger/issues"
+  },
+  "homepage": "https://github.com/JuanDArdilaG/j-logger#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "ramda": "^0.27.1"
+  }
+}
