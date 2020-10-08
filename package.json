@@ -1,6 +1,6 @@
 {
   "name": "@juandardilag/logger",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Modular and extensible Node.js logger module",
   "main": "logger.js",
   "scripts": {
