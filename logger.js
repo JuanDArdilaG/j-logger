@@ -1,7 +1,7 @@
 import R from "ramda";
 import chalk from "chalk";
 import { inspect } from "util";
-import Response from "./Returns/Response/Response.js";
+import Response from "@juandardilag/returns/Response/Response.js";
 /**
  * Function used to create an specific logger
  *
@@ -96,7 +96,6 @@ const buildHeader = (name, msg, style, type, color, verbose) => {
 };
 const buildVerboseHeader = (header, msg, color, style, type) => {
     let verboseHeader = `${header} ${type}`;
-    console.log("style", style);
     const MSG_TYPE = styled(`[${typeof msg}]`, style, {
         chalk: chalk.white,
         color: "white",
@@ -256,4 +255,5 @@ function contrast(colormappeduno, colormappeddos) {
     var darkest = Math.min(lum1, lum2);
     return (brightest + 0.05) / (darkest + 0.05);
 }
-export { createLogger, consoleLogger };
+export const CreateLogger = createLogger;
+export const ConsoleLogger = consoleLogger;

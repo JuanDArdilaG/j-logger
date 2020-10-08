@@ -1,8 +1,17 @@
 import R from "ramda";
 import chalk, { Chalk } from "chalk";
 import { inspect } from "util";
-import Response, { IResponse } from "../Returns/Response/Response.js";
-import { IError } from "../Returns/Response/Failed.js";
+import Response, {
+  IResponse,
+} from "@juandardilag/returns/Response/Response.js";
+
+interface ILogger {
+  log: any;
+  error: any;
+  on: any;
+  off: any;
+  verbose: any;
+}
 
 /**
  * Function used to create an specific logger
@@ -14,7 +23,7 @@ import { IError } from "../Returns/Response/Failed.js";
  * @return {Object} Return a logger with specific methods
  */
 let createLogger = R.curry(
-  (logger: any, name: string, colorizer: any, type: string) => {
+  (logger: any, name: string, colorizer: any, type: string): ILogger => {
     // Por defecto apagado el logger y verbose en false
     let on: boolean = false;
     let verbose: boolean = false;
@@ -143,7 +152,6 @@ const buildVerboseHeader = (
 ): string => {
   let verboseHeader: string = `${header} ${type}`;
 
-  console.log("style", style);
   const MSG_TYPE = styled(`[${typeof msg}]`, style, {
     chalk: chalk.white,
     color: "white",
@@ -337,4 +345,5 @@ function contrast(colormappeduno: Color, colormappeddos: Color) {
   return (brightest + 0.05) / (darkest + 0.05);
 }
 
-export { createLogger, consoleLogger };
+export const CreateLogger = createLogger;
+export const ConsoleLogger = consoleLogger;

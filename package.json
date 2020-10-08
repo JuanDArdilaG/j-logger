@@ -1,10 +1,11 @@
 {
-  "name": "j-logger",
-  "version": "1.0.0",
+  "name": "@juandardilag/logger",
+  "version": "0.1.5",
   "description": "Modular and extensible Node.js logger module",
   "main": "logger.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pub": "tsc && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,11 @@
   },
   "homepage": "https://github.com/JuanDArdilaG/j-logger#readme",
   "dependencies": {
+    "@juandardilag/returns": "^1.0.6",
+    "@types/ramda": "^0.27.20",
     "chalk": "^4.1.0",
-    "ramda": "^0.27.1"
-  }
+    "ramda": "^0.27.1",
+    "util": "^0.12.3"
+  },
+  "type": "module"
 }

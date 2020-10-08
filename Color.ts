@@ -15,3 +15,4 @@ interface IColor {
 class Color {}
 
 export default Color;
+export { IColor };
